@@ -1,0 +1,9 @@
+{
+  "name": "collectd-node",
+  "version": "0.0.1",
+  "description": "Coffeescript/Node.js reader for collectd protocol",
+  "keywords": ["collectd",],
+  "engines" : {"node" : ">=0.2.6"},
+  "directories": {"lib": "lib"},
+  "main": "./lib/collectd.js"
+}
