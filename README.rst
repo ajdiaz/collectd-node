@@ -14,4 +14,4 @@ This module require the binary-parser.js module by Jonas Raoni Soares Silva
 
 Enjoy!
 
-.. _`coffee_script`: http://jashkenas.github.com/coffee-script/
+.. _`coffee-script`: http://jashkenas.github.com/coffee-script/
