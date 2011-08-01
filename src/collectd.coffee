@@ -139,7 +139,7 @@ decode_network_packet = (buf, info) ->
 		                 (buf.slice (offset+SIZE_HEADER))
 
 
-class Reader
+class @Reader
 	constructor: (@port, @host, @mcast, @handler) ->
 		if typeof @port is "function"
 			@handler = @port
@@ -202,6 +202,4 @@ class Reader
 		if klass.handler? then klass.objectize \
 		                       (decode_network_packet message, rinfo), \
 		                       klass.handler
-
-
 
