@@ -96,9 +96,14 @@ decode_network_values = (ptype, plen, buf) ->
   value: (_decode_network_values ptype, plen, buf)
 
 decode_network_time = (ptype, plen, buf) ->
+  # cdtime_t is (seconds << 30)
+  #
+  # Ideally we would read a 64bit int and >>30, but javascript
+  # can't do that. So we read the upper 32bits, move it over and add
+  # the remaining 2 bits for the 34bit time in seconds.
   [upper, lower] = jspack.Unpack("!LL", buf)
   type:  ptype
-  value: (upper << 2) + (lower >> 30)
+  value: (upper << 2) + ((lower >> 30) & 0x3)
 
 decode_network_number = (ptype, plen, buf) ->
   type:  ptype
