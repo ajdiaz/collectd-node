@@ -1,9 +1,12 @@
 {
   "name": "collectd-node",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Coffeescript/Node.js reader for collectd protocol",
   "keywords": ["collectd"],
   "engines" : {"node" : ">=0.2.6"},
   "directories": {"lib": "lib"},
-  "main": "./lib/collectd.js"
+  "main": "./lib/collectd.js",
+  "dependencies": {
+    "node-jspack": "1.0.0"
+  }
 }
